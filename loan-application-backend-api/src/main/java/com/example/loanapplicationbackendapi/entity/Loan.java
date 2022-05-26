@@ -113,7 +113,13 @@ public class Loan {
     }
 
     public void setInterestRate(float interestRate) {
-        this.interestRate = interestRate;
+        //this.interestRate = interestRate;
+        if (this.creditScore > 700) {
+            this.interestRate = 3.00f;
+        } else {
+            this.interestRate = 4.00f;
+        }
+
     }
 
     //ToString Method
