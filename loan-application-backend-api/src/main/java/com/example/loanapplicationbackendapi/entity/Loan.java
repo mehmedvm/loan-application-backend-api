@@ -98,6 +98,11 @@ public class Loan {
 
     public void setCreditScore(int creditScore) {
         this.creditScore = creditScore;
+        if (this.creditScore > 700) {
+            this.interestRate = 3.00f;
+        } else {
+            this.interestRate = 4.00f;
+        }
     }
 
     public int getLoanNumber() {
@@ -112,19 +117,11 @@ public class Loan {
         return interestRate;
     }
 
-    public void setInterestRate(float interestRate) {
-        //this.interestRate = interestRate;
-        if (this.creditScore > 700) {
-            this.interestRate = 3.00f;
-        } else {
-            this.interestRate = 4.00f;
-        }
-
-    }
+//    public void setInterestRate(float interestRate) {
+//        //this.interestRate = interestRate;
+//    }
 
     //ToString Method
-
-
     @Override
     public String toString() {
         return "Loan{" +
