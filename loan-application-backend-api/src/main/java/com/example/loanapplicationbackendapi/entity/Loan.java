@@ -96,6 +96,8 @@ public class Loan {
         return creditScore;
     }
 
+    // Once the credit score is entered, the interest rate is determined as below;
+    // if score > 700, the rate is 3% / if score <= 700, the rate is 4%
     public void setCreditScore(int creditScore) {
         this.creditScore = creditScore;
         if (this.creditScore > 700) {
